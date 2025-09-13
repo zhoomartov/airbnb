@@ -1,5 +1,3 @@
-from django.template.defaulttags import comment
-
 from .models import *
 from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -8,10 +6,10 @@ import joblib
 from django.conf import settings
 import os
 
-model_path = os.path.join(settings.BASE_DIR, 'model.pkl')
+model_path = os.path.join(settings.BASE_DIR, 'model_nb.pkl')
 model = joblib.load(model_path)
 
-vec_path = os.path.join(settings.BASE_DIR, 'vec.pkl')
+vec_path = os.path.join(settings.BASE_DIR, 'vector.pkl')
 vec = joblib.load(vec_path)
 
 
